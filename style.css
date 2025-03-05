@@ -1,0 +1,32 @@
+style
+.banner
+{background: url("anhbia.png");
+    background-size:cover;
+    text-align:center;
+    color:bisque;
+    height:500px;
+    font-size: 120px;
+    font-family: monospace;
+}
+.slogan
+{text-align: center !important;
+ width: 70px;
+}
+.body{font-family: sans-serif !important;
+      font-size: 50px !important;
+      color:black;}
+.li {font-family: monospace;
+     color: red;
+     font-size: 70px;
+}
+.table {width:200px;
+        height:220px;
+        border:"10%";
+}
+.footer{background-color: bisque;
+        padding: 10px;
+}
+.image{display:block;
+       max-width:200px;
+       height: 50px;
+}
