@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lớp 12A6</title>
+<link href='style.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+ <header>
+  <div class='banner'>
+   <h1>Tập thể A6</h1>
+  </div>
+  <div class='slogan'>
+   <div class='row'>
+   <h2 style="text-align: center;">Nơi cất giữ 41 thi thể</h2>
+  </div>
+ </header>
+ <main>
+  <div>
+  <ol>
+  <li><strong>Thông tin thành viên</strong
+<br><label for="searchInput">
+  <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Nhập từ khoá bạn muốn tìm">
+  <input type="button" value="Tìm" id="searchTable()">
+  </label>
+  <script>
+    function searchTable()
+    let input = document.getElementById("searchInput").value.toLowerCase();
+        let table = document.getElementById("dataTable");
+            let rows = table.getElementsByTagName("tr");
+            for (let i = 1; i < rows.length; i++) {  // Lặp qua từng hàng, bỏ qua hàng tiêu đề
+    let cells = rows[i].getElementsByTagName("td"); // Lấy tất cả ô trong hàng
+    let found = false;
+
+    for (let j = 0; j < cells.length; j++) { // Lặp qua từng ô trong hàng
+        if (cells[j].innerText.toLowerCase().includes(input)) { 
+            found = true;  // Nếu tìm thấy từ khóa, đặt biến found = true
+            break;  // Thoát khỏi vòng lặp, không cần kiểm tra các ô còn lại
+        }
+    }
+
+    rows[i].style.display = found ? "" : "none"; // Hiển thị hoặc ẩn hàng
+}
+</script>
+  <table border="10%" >
+   <tr>
+    <th>STT</th>
+    <th>Họ và tên</th>
+    <th>Ngày sinh</th>
+    <th>Giới tính</th>
+    </tr>
+   <tr>
+    <td>1</td>
+    <td>Trương Gia Bảo</td>
+    <td>24/02/2007</td>
+    <td>Nam</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Nguyễn Khắc Duy</td>
+        <td>27/03/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Nguyễn Thị Mỹ Duyên</td>
+        <td>20/01/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Hồ Tuấn Đạt</td>
+        <td>30/04/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Nguyễn Quốc Đạt</td>
+        <td>24/03/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Nguyễn Vũ Đăng</td>
+        <td>19/01/2007</td>
+        <td>Nam
+        </td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Nguyễn Triều Đông</td>
+        <td>17/12/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Vũ Thị Hương Giang</td>
+        <td>27/08/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>Phạm Thị Ngọc Hân</td>
+        <td>12/01/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Lê Thái Hiển</td>
+        <td>11/10/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Phạm Đỗ Gia Huy</td>
+        <td>30/01/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Phan Thị Ngọc Huyền</td>
+        <td>26/04/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>Đặng Duy Khang</td>
+        <td>08/11/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>Phạm Trương Hoài Khang</td>
+        <td>16/09/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>Võ Kim Khoa</td>
+        <td>15/01/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>Thượng Nguyễn Huy Khôi</td>
+        <td>18/08/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>Nguyễn Thị Thanh Lam</td>
+        <td>23/05/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>Trần Khánh Linh</td>
+        <td>27/02/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>Đào Nhật Long</td>
+        <td>08/03/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>Hà Ngọc Long</td>
+        <td>11/11/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>Nguyễn Trà My</td>
+        <td>11/05/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>Bùi Thị Kim Ngân</td>
+        <td>24/08/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>Nguyễn Ngọc Nghi</td>
+        <td>27/03/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>Lê Hiếu Nghĩa</td>
+        <td>10/05/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>Huỳnh Thạch Bảo Ngọc</td>
+        <td>25/08/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>Nguyễn Thị Bích Ngọc</td>
+        <td>18/10/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>Phạm Hồng Ngọc</td>
+        <td>06/10/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>Phan Thị Thanh Nhi</td>
+        <td>27/03/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>Đỗ Xuân Như</td>
+        <td>27/02/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>Nguyễn Thị Huỳnh Như</td>
+        <td>14/07/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>Vương Hoàng Oanh</td>
+        <td>25/11/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>Nguyễn Đình Phúc</td>
+        <td>01/02/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>Trương Thiên Phúc</td>
+        <td>05/09/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td>Phạm Vạn Phước</td>
+        <td>16/10/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td>Huỳnh Thị Tố Tâm</td>
+        <td>09/10/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td>Trần Nhật Thiên Thanh</td>
+        <td>29/10/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td>Võ Trung Thành</td>
+        <td>26/02/2007</td>
+        <td>Nam</td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td>Lê Huỳnh Minh Thư</td>
+        <td>25/04/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>39</td>
+        <td>Trần Thị Thanh Tiền</td>
+        <td>23/09/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>Dương Huyền Trang</td>
+        <td>29/06/2007</td>
+        <td>Nữ</td>
+    </tr>
+    <tr>
+        <td>41</td>
+        <td>Huỳnh Thế Vĩnh</td>
+        <td>29/11/2007</td>
+        <td>Nam</td>
+    </tr>
+    </table>
+    </li>
+<li>Thành tựu 
+    <p style="text-align:left;"><b>02 giải nhì</b> văn nghệ với chủ đề mừng ngày Nhà giáo Việt Nam và Hội trại Xuân 2025</p>
+         <a style="text-align: right;">
+            <image src="/Users/thienthanh/Library/Mobile Documents/com~apple~CloudDocs/Downloads/banhkem.png">
+        </image>
+        </a>
+    <p style="text-align: right;"> <b>01 giải nhì</b> hoạt động ngoại khoá môn Tiếng Anh 2022-2023</p>
+            <a style="text-align: left;">
+               <image src="/Users/thienthanh/Library/Mobile Documents/com~apple~CloudDocs/Downloads/banhkem.png">
+           </image>
+           </a>
+    <p style="text-align: left;"> <b>Một số giải khuyến khích</b> trong các hoạt động ngoại khoá do các tổ bộ môn tổ chức</p>
+            <a style="text-align: right;">
+               <image src="/Users/thienthanh/Library/Mobile Documents/com~apple~CloudDocs/Downloads/banhkem.png">
+           </image>
+           </a>
+</li>
+<li>Hình ảnh tập thể
+    </li>
+</ol>
+</div>      
+</main>
+<footer>
+ <div class='row'>
+    <ol>
+        <li>SĐT GVCN:
+            <ul>
+                <li>Cô Phan Thị Khôi Nguyên: <em>0907755987</em></li>
+                <li>Cô Trần Thị Kim Mỹ: <em>0963288974</em></li>
+                <li>Cô Đỗ Thị Diễm: <em>0988568995</em></li>
+            </ul>
+        <li>Địa chỉ liên hệ: Trường THPT Tây Ninh - <em>Nguyễn Chí Thanh,KP1,tp Tây Ninh,tỉnh Tây Ninh</em></li>
+    </ol>
+ </div>
+</footer>     
+</body>
+</html>
